@@ -215,3 +215,9 @@ Potential improvements include explicit input validation, clearer error states f
 Document text normalization, vectorization, model choice, and label balance. Evaluate with precision, recall, F1, and error examples on held-out reviews.
 
 For reproducibility, record source versions, environment and dependency versions, configuration, and actual test outputs. Clearly label sample data and illustrative results; never commit secrets or private data.
+
+### Technical Deep Dive
+
+The graph-based workflow separates planning from code generation/execution and uses shared state to pass intermediate results between nodes. Keep state fields explicit, define conditional routing and termination criteria, and bound retries so a failed code-generation step cannot loop indefinitely. For data-analysis agents, compute factual aggregates with deterministic Python rather than asking the LLM to invent row counts or statistics.
+
+Suggested engineering checks: validate generated code against an allowlisted execution environment, set time and memory limits, avoid passing secrets into child processes, and document that subprocess isolation alone does not block filesystem or network access.
