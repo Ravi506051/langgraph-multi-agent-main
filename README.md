@@ -201,3 +201,11 @@ B.Tech Information Technology | AI/ML | Data Science | Agentic AI
 ---
 
 If you find this project useful, consider giving the repository a ⭐ on GitHub.
+
+## Experiment and Safety Notes
+
+Use the sample notebooks to understand the graph flow before changing agent prompts or tools. Record the data source, query, execution environment, and generated outputs for each experiment so results can be reproduced. Review generated code before running it, especially when adapting the workflow to data outside the supplied examples.
+
+## Extension Ideas
+
+Potential improvements include explicit input validation, clearer error states for failed tool calls, structured output validation, and tests for graph routing and stopping conditions. Document which parts are deterministic and which depend on an LLM.
