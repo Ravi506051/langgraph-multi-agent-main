@@ -209,3 +209,9 @@ Use the sample notebooks to understand the graph flow before changing agent prom
 ## Extension Ideas
 
 Potential improvements include explicit input validation, clearer error states for failed tool calls, structured output validation, and tests for graph routing and stopping conditions. Document which parts are deterministic and which depend on an LLM.
+
+## Project Development Notes
+
+Document text normalization, vectorization, model choice, and label balance. Evaluate with precision, recall, F1, and error examples on held-out reviews.
+
+For reproducibility, record source versions, environment and dependency versions, configuration, and actual test outputs. Clearly label sample data and illustrative results; never commit secrets or private data.
