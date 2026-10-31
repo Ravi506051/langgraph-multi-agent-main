@@ -233,3 +233,11 @@ When experimenting with the LangGraph workflow, evaluate each node independently
 - Verify generated charts and numerical claims against the source dataset before sharing results.
 
 Preserve the original authors' attribution and license when adapting this project.
+
+## Multi-Agent Workflow Design
+
+- Model the workflow as explicit states and transitions, with typed inputs and outputs between nodes.
+- Keep each agent's responsibility narrow and define clear routing conditions for handoffs.
+- Add iteration limits, timeouts, and recovery paths to prevent loops and stalled executions.
+- Make tool calls observable through structured traces while redacting credentials and sensitive content.
+- Evaluate routing accuracy, tool-use correctness, and end-to-end task success on repeatable scenarios.
