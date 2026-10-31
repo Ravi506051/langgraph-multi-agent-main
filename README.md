@@ -221,3 +221,15 @@ For reproducibility, record source versions, environment and dependency versions
 The graph-based workflow separates planning from code generation/execution and uses shared state to pass intermediate results between nodes. Keep state fields explicit, define conditional routing and termination criteria, and bound retries so a failed code-generation step cannot loop indefinitely. For data-analysis agents, compute factual aggregates with deterministic Python rather than asking the LLM to invent row counts or statistics.
 
 Suggested engineering checks: validate generated code against an allowlisted execution environment, set time and memory limits, avoid passing secrets into child processes, and document that subprocess isolation alone does not block filesystem or network access.
+
+## Multi-Agent Workflow: Evaluation and Safety
+
+When experimenting with the LangGraph workflow, evaluate each node independently as well as the complete graph. Record the state fields passed between nodes, tool inputs, execution results, and graph termination conditions.
+
+- Validate generated code before execution and use an isolated, resource-limited environment.
+- Add explicit timeouts, retry limits, and error routes to prevent endless agent loops.
+- Test missing API configuration, invalid user requests, empty data, and tool failures.
+- Keep secrets in environment variables and never commit `.env` files.
+- Verify generated charts and numerical claims against the source dataset before sharing results.
+
+Preserve the original authors' attribution and license when adapting this project.
