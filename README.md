@@ -241,3 +241,10 @@ Preserve the original authors' attribution and license when adapting this projec
 - Add iteration limits, timeouts, and recovery paths to prevent loops and stalled executions.
 - Make tool calls observable through structured traces while redacting credentials and sensitive content.
 - Evaluate routing accuracy, tool-use correctness, and end-to-end task success on repeatable scenarios.
+
+## Multi-Agent Workflow Evaluation
+
+- Define the state schema and expected input/output contract for every graph node.
+- Add tests for missing data, tool failures, invalid generated code, execution timeouts, and graph termination conditions.
+- Keep deterministic data extraction separate from LLM-based planning and interpretation.
+- Run generated code in a restricted environment and record model, prompt, tool, and dependency versions for reproducibility.
