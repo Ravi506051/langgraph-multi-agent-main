@@ -248,3 +248,16 @@ Preserve the original authors' attribution and license when adapting this projec
 - Add tests for missing data, tool failures, invalid generated code, execution timeouts, and graph termination conditions.
 - Keep deterministic data extraction separate from LLM-based planning and interpretation.
 - Run generated code in a restricted environment and record model, prompt, tool, and dependency versions for reproducibility.
+
+## Skills Demonstrated
+
+- LangGraph orchestration
+- multi-agent workflows
+- task planning
+- Python code generation
+- tool integration
+- state management.
+
+## Portfolio Context
+
+This project is part of my hands-on learning portfolio. The repository documents the workflow and implementation; results should be reproduced from the included code and data before being used in reports or professional claims.
