@@ -261,3 +261,10 @@ Preserve the original authors' attribution and license when adapting this projec
 ## Portfolio Context
 
 This project is part of my hands-on learning portfolio. The repository documents the workflow and implementation; results should be reproduced from the included code and data before being used in reports or professional claims.
+
+## Multi-Agent Evaluation
+
+- Define the responsibility and expected output schema for each agent or graph node.
+- Validate generated code and constrain execution to an isolated environment with limited permissions.
+- Test planning, tool failures, malformed outputs, and recovery paths independently.
+- Measure end-to-end task success and reproducibility, not only the quality of an individual agent response.
